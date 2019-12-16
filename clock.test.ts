@@ -77,7 +77,7 @@ describe('Clock', () => {
     test('negative hour and minutes both roll over continuously', () => {
       expect(new Clock(-121, -5810).toString()).toEqual('22:10')
     })
-  //
+
   //   describe('Adding and subtracting minutes', () => {
   //     test('add minutes', () => {
   //       expect(new Clock(10, 0).plus(3).toString()).toEqual('10:03')
