@@ -13,6 +13,18 @@ class Clock {
     return `${parseFloat(hours) < 0 ? (24 + parseFloat(hours)).toString().padStart(2, '0') : hours}:${parseFloat(minutes) < 0 ? (60 + parseFloat(minutes)).toString().padStart(2, '0') : minutes}`
   }
 
+  public plus(min: number) {
+    return new Clock(this.hours, this.minutes + min)
+  }
+
+  public minus(min: number) {
+    return new Clock(this.hours, this.minutes - min)
+  }
+
+  public equals(clock: Clock) {
+    return this.toString() === clock.toString()
+  }
+
 }
 
 
